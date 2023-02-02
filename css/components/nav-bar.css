@@ -1,0 +1,40 @@
+.nav{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    background-color: #f9f9fa;
+    padding:15px 40px;
+    box-sizing: border-box; /*padding을 주더라도 box size를 늘리지 않는다.*/
+    border-top : 1px solid rgba(121,121,121,0.3);
+}
+.nav__ul {
+    display: flex;
+    justify-content: space-between;
+}
+.nav__link {
+    color:#2F363E;
+    position: relative;
+}
+.nav__notification {
+    background-color: tomato;
+    width:30px;   /*span은 inline이라 높이와 너비가 적용되지 않음 block으로 바꿔야함*/
+    height:30px;
+    border-radius:15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: 500;
+    position:absolute;
+    left:18px;
+    bottom:15px;
+}   
+.nav__notification2 {
+    background-color: tomato;
+    width:6px;
+    height: 6px;
+    border-radius:3px;
+    display: block;
+    position: absolute;
+    left:27px;
+}
