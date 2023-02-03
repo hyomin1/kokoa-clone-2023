@@ -16,15 +16,7 @@
     position: relative;
 }
 .nav__notification {
-    background-color: tomato;
-    width:30px;   /*span은 inline이라 높이와 너비가 적용되지 않음 block으로 바꿔야함*/
-    height:30px;
-    border-radius:15px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-weight: 500;
+
     position:absolute;
     left:18px;
     bottom:15px;

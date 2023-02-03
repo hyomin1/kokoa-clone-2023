@@ -1,0 +1,11 @@
+.badge {
+    background-color: tomato;
+    width:25px;   /*span은 inline이라 높이와 너비가 적용되지 않음 block으로 바꿔야함*/
+    height:25px;
+    border-radius:12.5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: 500;
+}
