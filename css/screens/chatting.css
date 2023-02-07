@@ -1,3 +1,143 @@
 #chat-screen {
     background-color: #abc1d1;
+    height: 11000vh;
+}
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+    top:0;
+    position: fixed;
+    width:100%;
+    box-sizing: border-box;
+    background-color: #abc1d1; 
+}
+
+.alt-header__column {
+    width:33%;
+}
+.main-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 115px;
+}
+#chat-screen .status-bar {
+    z-index: 2;
+}
+#chat-screen .alt-header {
+    z-index: 1; /* z-index 는 layer같은 개념 
+                숫자가 낮을수록 낮은 layer 클수록 상위  layer
+                fixed, absolute에 이용 가능*/
+}
+.chat__timestamp {
+    color:white;
+    background-color: #92a4be;
+    padding:8px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+.message-row img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.message__author {
+    opacity: 0.8;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+}
+.message__bubble {
+    background-color: white;
+    padding:13px;
+    font-size:17px;
+    border-radius: 15px;
+    border-top-left-radius:0px; /*border의 왼쪽 위를 각지게 만든다*/
+    margin-right: 5px;
+}
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+.message__time {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+.message-row--own { /*modifier사용으로 간편하게 작성*/
+    justify-content: flex-end;
+}
+.message-row--own .message__bubble {
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    margin-left:5px;
+}
+/*.message-row--own .message__bubble 
+    order:1;   order는 flex children에게만 적용된다.
+}
+.message-row--own .message__time {
+    order:0;
+}*/
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+}
+.reply {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding:5px 20px;
+    align-items: center;
+    box-sizing: border-box;
+}
+.reply .reply__column:first-child {
+    width:10%;
+}
+.reply__column:last-child {
+    width:90%;
+    position: relative;
+}
+.reply input {
+    
+    border:var(--main-border);
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;  /*부모의 width가 없으면 자식 width를 설정해줄 수 없음*/
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: -3px;
+    top:2px;
+}
+.reply__column:last-child i{
+    right:40px;
+    top:16px;
+}
+.reply__column button {
+    background-color: var(--yellow);
+    border:none;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.reply__column button:focus,
+.reply__column button:active{
+    outline:none;
+}
+.reply i {
+    opacity: 0.5;
+}
+.reply__column button i {
+    opacity: 1;
 }
