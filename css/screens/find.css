@@ -99,3 +99,21 @@
     align-items: center;
     margin-top: 10px;
 }
+@keyframes heartBeat {
+    0% {
+        color:white;
+        transform: none;
+    }
+    50% {
+        color:tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        color:white;
+        transform: none;
+    }
+}
+.open-post__heart-count:hover i {
+    will-change: transform;    /*브라우저를 돕는 변화, 애니메이션이 부드럽게 동작할 수 있게 해줌*/
+    animation: heartBeat 1s linear infinite;
+}

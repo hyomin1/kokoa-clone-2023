@@ -15,11 +15,23 @@
     color:#2F363E;
     position: relative;
 }
+@keyframes notifyAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(180deg);
+    }
+    100% {
+        transform: none;
+    }
+}
 .nav__notification {
 
     position:absolute;
     left:18px;
     bottom:15px;
+    animation: notifyAnimation 2s ease-in-out infinite;
 }   
 .nav__notification2 {
     background-color: tomato;
@@ -29,4 +41,30 @@
     display: block;
     position: absolute;
     left:27px;
+}
+@keyframes appear {
+    from {
+        
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.nav__ul {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: appear 0.3s ease-in-out forwards;
+}
+.nav__li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.nav__li:nth-child(3) {
+    animation-delay: 1s;
+}
+.nav__li:last-child {
+    animation-delay: 1.5s;
 }
